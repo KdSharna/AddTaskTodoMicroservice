@@ -2,20 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: todo-add-tasks-api
-  namespace: ramu
-  labels: 
-    env: ramu
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: todo-add-tasks-api
-      env: ramu
   template:
     metadata:
       labels:
         app: todo-add-tasks-api
-        env: ramu
     spec:
       containers:
       - name: todo-add-tasks-api
